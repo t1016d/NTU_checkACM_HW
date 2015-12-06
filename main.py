@@ -4,6 +4,7 @@ import get_pid
 import html
 
 jsonfile = open( 'python/NTU_checkACM_HW/set.json' , 'r' )
+#jsonfile = open( 'set.json' , 'r' )
 jsoncontent = jsonfile.read()
 jsoncontent = jsoncontent[:-1]
 #print(jsoncontent)
@@ -43,7 +44,9 @@ mysolve = set( mysolve )
 
 teamsolve = []
 
-target_url = 'http://acm.csie.org/ntujudge/user_info.php?teamname=' + setting['team_name']
+teamname_url = urllib.parse.quote( setting['team_name'] )
+#print( teamname_url )
+target_url = 'http://acm.csie.org/ntujudge/user_info.php?teamname=' + teamname_url
 response = 	urllib.request.urlopen( target_url )
 for line in response:
 	line = line.decode( 'UTF-8' )
