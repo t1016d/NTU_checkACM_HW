@@ -44,7 +44,7 @@ mysolve = set( mysolve )
 
 teamsolve = []
 
-teamname_url = urllib.parse.quote( setting['team_name'] )
+teamname_url = urllib.parse.quote( setting['team_name'] , safe = '' )
 #print( teamname_url )
 target_url = 'http://acm.csie.org/ntujudge/user_info.php?teamname=' + teamname_url
 response = 	urllib.request.urlopen( target_url )
