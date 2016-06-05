@@ -1,10 +1,11 @@
+#!/usr/bin/env python3
 import urllib.request
 import json
 import get_pid
 import html
 
-jsonfile = open( 'python/NTU_checkACM_HW/set.json' , 'r' )
-#jsonfile = open( 'set.json' , 'r' )
+#jsonfile = open( 'python/NTU_checkACM_HW/set.json' , 'r' )
+jsonfile = open( 'set.json' , 'r' )
 jsoncontent = jsonfile.read()
 jsoncontent = jsoncontent[:-1]
 #print(jsoncontent)
