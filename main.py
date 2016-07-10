@@ -3,6 +3,7 @@ import urllib.request
 import json
 import get_pid
 import html
+import sys
 
 #jsonfile = open( 'python/NTU_checkACM_HW/set.json' , 'r' )
 jsonfile = open( 'set.json' , 'r' )
@@ -27,7 +28,7 @@ for i in range( contest_num ):
 		line = line.decode( 'UTF-8' )
 		list = get_pid.get( line )
 		pid[i].extend( list )
-#print( pid )
+print( pid , file=sys.stderr )
 
 mysolve = []
 
